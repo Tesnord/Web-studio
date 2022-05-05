@@ -1,0 +1,27 @@
+.logo {
+	font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+	letter-spacing: 0.03em;
+  font-size: 24px;
+  line-height: 1.16;
+
+  &--header {
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.19;
+      margin-right: 93px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+  }
+
+  &--accent {
+    color: $accent-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &--footer {
+    color: $text-color-light;
+  }
+}

@@ -1,0 +1,36 @@
+.form-send {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	&__input {
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
+		width: 450px;
+		background-color: transparent;
+		padding: 15px;
+		color: $text-color-light;
+		margin-bottom: 20px;
+	}
+	
+	&__input::placeholder {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.25;
+		letter-spacing: 0.03em;
+		color: rgba(255, 255, 255, 0.6);
+	}
+	
+	&__text {
+		color: $text-color-light;
+		padding-bottom: 20px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+}
+
+
+

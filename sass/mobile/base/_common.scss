@@ -1,0 +1,39 @@
+* {
+	line-height: normal;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+	font-family: $font-main;
+	font-style: normal;
+	color: $title-color;
+}
+
+ul, h1, h2, h3, h4, h5, h6, p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: $title-color;
+}
+
+.container {
+	width: 100%;
+	padding: 0 15px;
+}
+
+.section {
+	padding: 60px 0;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.17;
+	letter-spacing: 0.03em;
+	text-align: center;
+	padding-bottom: 30px;
+}

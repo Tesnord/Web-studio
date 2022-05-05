@@ -1,0 +1,174 @@
+.backdrop {
+	background-color: rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&.is-hidden {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+}
+
+.modal {
+	background: #FFFFFF;
+	box-shadow: 0px 1px 3px rgba(80, 65, 65, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	width: 450px;
+	margin: 15px 15px;
+	padding: 40px;
+	position: relative;
+
+	&-button {
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		border: none;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 50%;
+		position: absolute;
+		right: 8px;
+		top: 8px;
+
+		& svg {
+			width: 11px;
+			height: 11px;
+		}
+	
+		&:hover svg {
+			fill: $accent-color;
+		}
+	}
+	/* Перенести в form.scss ??? */
+	&-form {
+		font-weight: 400;
+		color: $text-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 370px;
+		display: flex;
+		flex-direction: column;
+
+		&-icon {
+			position: relative;
+			display: block;
+
+			& svg {
+				width: 18px;
+				height: 18px;
+				fill: $title-color;
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+			}
+		}
+
+		&-label {
+			margin-bottom: 10px;
+		}
+
+		&-input {
+			padding: 12px 0 12px 42px;
+			height: 40px;
+		}
+		
+		&-textarea textarea {
+			height: 120px;
+			margin-bottom: 20px;
+			padding: 12px 16px;
+			resize: none;
+			max-width: 370px; /*???*/
+		}
+		
+		&-textarea textarea::placeholder {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.14;
+			letter-spacing: 0.01em;
+			color: rgba(117, 117, 117, 0.5);
+		}
+		
+		&-input,
+		&-textarea textarea {
+			font-size: 12px;
+			line-height: 1.67;
+			letter-spacing: 0.01em;
+			width: 370px;
+			border: 1px solid rgba(33, 33, 33, 0.2);
+			border-radius: 4px;
+			margin-top: 4px;
+		}
+		
+		&-label:focus-within input,
+		&-textarea:focus-within textarea {
+			border: 1px solid #2196F3;
+		}
+		
+		&-label:focus-within svg {
+			fill: $accent-color;
+		}
+		
+		&-checkbox {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+		
+		&-checkbox input {
+			margin-right: 8px;
+			visibility: hidden;
+		}
+		
+		&-policy__text::before {
+			content: '';
+			position: absolute;
+			left: -24px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: block;
+			width: 16px;
+			height: 15px;
+			border: 2px solid $title-color;
+			background-color: $text-color-light;
+			border-radius: 2px;
+			background-origin: padding-box;
+		}
+
+		&-policy__text {
+			position: relative;
+			font-size: 12px;
+			line-height: 1.16;
+			letter-spacing: 0.03em;
+
+			.checkbox-input:checked + &::before {
+				background-color: $accent-color;
+				border: none;
+				background-image: url(/images/svg/checked.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+		
+		&-policy__link {
+			color: $accent-color;
+			text-decoration: line;
+		}
+	}
+
+	& h2 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.15;
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: $title-color;
+		margin-bottom: 12px;
+	}
+}
